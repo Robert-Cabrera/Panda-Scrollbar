@@ -1,0 +1,97 @@
+/* Hide scrollbar for Chrome, Opera and Safari*/
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox [support] */
+
+.container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+
+/* Regular CSS stuff for the sample, can be ignored*/
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 4%;
+  border-style: solid;
+  justify-content: center;
+
+}
+
+/* Regular CSS stuff for the sample, can be ignored*/
+
+.section {
+  width: 40%;
+  margin: 2em 2em;
+  border-style: solid;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* Regular CSS stuff for the sample, can be ignored*/
+
+.section > h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+/* Regular CSS stuff for the sample, can be ignored*/
+
+.section > img {
+  width: 60%;
+  border-radius: 2%;
+}
+
+/* Regular CSS stuff for the sample, can be ignored*/
+
+.section > p{
+  width: 50%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 1em auto; /* Center the section */
+  }
+}
+
+/* Container for what is effectively the scrollbar, it contains the two alternating images and the bamboo */
+
+#scrollEffect {
+  position: fixed; 
+  right: 0;
+  bottom: 0;
+  top: 0;             
+  width: 50%;         
+  overflow: hidden;   
+  z-index: 999;                     /* Assure the scrollbar content is always visible*/
+}
+
+#panda{
+  position: absolute;
+  height: auto;
+  width: 20%;
+  top: 0;
+  right: -5%;
+  transition: top 0.5s ease;
+
+}
+
+
+
+#bamboo {
+  position: absolute;
+  top: 0;
+  right: -23%; 
+  width: 40%;
+  height: 100%; 
+}
